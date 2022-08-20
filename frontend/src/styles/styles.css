@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #f5f4f7;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Nunito";
+  color: #161618;
+  background-color: #dbdbdb;
+}
+
+img {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+}
+
+button {
+  background-color: transparent;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  color: #f5f4f7;
+  font-size: 16px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+input {
+  outline: none;
+  border: none;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  font-size: 18px;
+  background-color: #f5f4f7;
+  padding: 15px;
+  border: 3px solid #f5f4f7;
+  border-radius: 15px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+input:focus {
+  border: 3px solid #3c26ca;
+}
+
+.layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100vh;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+.layout .navBar {
+  background-color: #dbdbdb;
+  padding: 50px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 250px;
+  text-align: center;
+}
+
+.layout .navBar h4 {
+  margin-top: 10px;
+}
+
+.layout .navBar .navHeader {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  place-items: center;
+}
+
+.layout .navBar .navButtons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+
+.layout .navBar .navButtons button {
+  text-align: left;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 22px;
+  letter-spacing: 2px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 10px 15px;
+  border-radius: 20px;
+  color: #161618;
+  cursor: pointer;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -ms-grid-columns: 35px 1fr;
+      grid-template-columns: 35px 1fr;
+  grid-gap: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.layout .navBar .navButtons button:hover {
+  color: #f5f4f7;
+  background-color: #3c26ca;
+}
+
+.layout .navBar .navButtons .selected {
+  color: #f5f4f7;
+  background-color: #3c26ca;
+}
+
+.layout .navBar .navFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.layout .navBar .navFooter img {
+  height: 50px;
+  width: 50px;
+}
+
+@media (max-width: 1150px) {
+  .layout .navBar {
+    padding: 30px;
+  }
+  .layout .navBar h4 {
+    display: none;
+  }
+  .layout .navBar .navButtons {
+    place-items: center;
+    grid-gap: 40px;
+  }
+  .layout .navBar .navButtons button {
+    font-size: 28px;
+    grid-gap: 0px;
+  }
+  .layout .navBar .navButtons button p {
+    display: none;
+  }
+  .layout .navBar .navFooter {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .layout .navBar .navFooter h1 {
+    display: none;
+  }
+}
+
+.layout .content {
+  width: 100%;
+  background-color: #dbdbdb;
+  overflow: hidden;
+}
+
+.layout .content ::-webkit-scrollbar {
+  display: none;
+}
+
+.layout .content .mainContent {
+  padding: 15px;
+  background-color: #dbdbdb;
+  overflow: auto;
+  height: 100%;
+}
+
+@media (max-width: 600px) {
+  .layout {
+    position: relative;
+  }
+  .layout .navBar {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 10px;
+    overflow-x: scroll;
+    max-width: 100%;
+  }
+  .layout .navBar .navHeader {
+    display: none;
+  }
+  .layout .navBar .navButtons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    grid-gap: 10px;
+  }
+  .layout .navBar .navButtons button {
+    grid-gap: 0px;
+    font-size: 22px;
+    padding: 10px;
+  }
+  .layout .navBar .navButtons button p {
+    display: none;
+  }
+  .layout .navBar .navFooter {
+    display: none;
+  }
+  .layout .content {
+    padding-bottom: 68px;
+  }
+}

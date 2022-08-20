@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap");
+
+$text_white: #f5f4f7;
+$text_grey: #a8a8a8;
+$text_dark: rgb(22, 22, 24);
+$background1: #dbdbdb;
+$background2: rgb(22, 22, 24);
+$accent1: #3c26ca;
+$accent1_hover: #3b1cff;
+$max_width: 1400px;
+$max_width2: 800px;
+$doneColor: green;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: $text_white;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Nunito";
+  color: $text_dark;
+  background-color: $background1;
+}
+
+img {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+}
+
+button {
+  background-color: transparent;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  color: $text_white;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+input {
+  outline: none;
+  border: none;
+  height: fit-content;
+  width: 100%;
+  font-size: 18px;
+  background-color: $text_white;
+  padding: 15px;
+  border: 3px solid $text_white;
+  border-radius: 15px;
+  transition: 0.3s;
+  &:focus {
+    border: 3px solid $accent1;
+  }
+}
+
+// MAIN LAYOUT
+.layout {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  margin: 0 auto;
+  max-width: $max_width;
+
+  .navBar {
+    background-color: $background1;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 250px;
+    text-align: center;
+
+    h4 {
+      margin-top: 10px;
+    }
+
+    .navHeader {
+      display: grid;
+      grid-template-columns: 1fr;
+      place-items: center;
+    }
+
+    .navButtons {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+
+      button {
+        text-align: left;
+        width: fit-content;
+        font-size: 22px;
+        letter-spacing: 2px;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        padding: 10px 15px;
+        border-radius: 20px;
+        color: $text_dark;
+        cursor: pointer;
+        display: grid;
+        place-items: center;
+        grid-template-columns: 35px 1fr;
+        grid-gap: 10px;
+        transition: 0.3s;
+
+        &:hover {
+          color: $text_white;
+          background-color: $accent1;
+        }
+      }
+
+      .selected {
+        color: $text_white;
+        background-color: $accent1;
+      }
+    }
+
+    .navFooter {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        height: 50px;
+        width: 50px;
+      }
+    }
+  }
+  @media (max-width: 1150px) {
+    .navBar {
+      padding: 30px;
+      h4 {
+        display: none;
+      }
+      .navButtons {
+        place-items: center;
+        grid-gap: 40px;
+        button {
+          font-size: 28px;
+          grid-gap: 0px;
+          p {
+            display: none;
+          }
+        }
+      }
+      .navFooter {
+        justify-content: center;
+        h1 {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .content {
+    width: 100%;
+
+    background-color: $background1;
+    overflow: hidden;
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    .mainContent {
+      padding: 15px;
+      background-color: $background1;
+      overflow: auto;
+      height: 100%;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .layout {
+    position: relative;
+
+    .navBar {
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      padding: 10px;
+      overflow-x: scroll;
+      max-width: 100%;
+      .navHeader {
+        display: none;
+      }
+
+      .navButtons {
+        display: flex;
+        justify-content: space-between;
+        grid-gap: 10px;
+        button {
+          grid-gap: 0px;
+          font-size: 22px;
+          padding: 10px;
+          p {
+            display: none;
+          }
+        }
+      }
+
+      .navFooter {
+        display: none;
+      }
+    }
+
+    .content {
+      padding-bottom: 68px;
+    }
+  }
+}
+
