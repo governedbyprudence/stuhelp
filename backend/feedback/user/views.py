@@ -124,8 +124,14 @@ def admin_view(request):
             password=data["password"]
             try:
                 institute_ob=institute.objects.get(id=institute_id)
-                dataset=admin(institute=institute_ob,first_name=first_name,last_name=last_name,email=email,password=password)
-                dataset.save()
+                try:
+                    dataset=admin(institute=institute_ob,
+                    first_name=first_name,last_name=last_name,email=email,password=password,auth_token=None)
+                    print(dataset.first_name)
+                    dataset.save()
+                except Exception as e:
+                    print("admin exception",e)
+                    return JsonResponse({"message":"admin not save error"})
                 institute_ob.admin_id=dataset.id
                 institute_ob.save()
             except Exception as e:

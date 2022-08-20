@@ -37,18 +37,17 @@ const ClassListItem = ({ data, deleteFunc }) => {
   const studentFormRef = useRef();
 
   useEffect(() => {
-    const func = async () => {
-      const res = await getFaculty(user.id, setFaculty);
-
-      let arr = [];
-      for (let i = 0; i < faculty.length; i++) {
-        arr.push(faculty[i].name);
-      }
-
-      setFacultyList(arr);
-    };
-    func();
+    getFaculty(user.id, setFaculty);
   }, []);
+
+  useEffect(() => {
+    let arr = [];
+    for (let i = 0; i < faculty.length; i++) {
+      arr.push(faculty[i].name);
+    }
+
+    setFacultyList(arr);
+  }, [faculty]);
 
   const FetchFacultyClass = async () => {
     getFacultyOfClass(user.id, data.id, setFacultyClass);

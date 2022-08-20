@@ -112,6 +112,7 @@ export const postFeedback = async (req) => {
 export const getFaculty = async (user_id, setData) => {
   try {
     const res = await api.get(`/faculty?admin_id=${user_id}`);
+    console.log(res.data.data)
     setData(res.data.data);
     return "SUCCESS";
   } catch (err) {
