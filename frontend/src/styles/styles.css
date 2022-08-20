@@ -250,6 +250,215 @@ input:focus {
   }
 }
 
+.inputField {
+  border-radius: 15px;
+  background-color: #161618;
+  color: #f5f4f7;
+  padding: 15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 80px;
+      grid-template-columns: 1fr 80px;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.inputField input {
+  margin-top: 10px;
+}
+
+.inputField button {
+  background-color: #3c26ca;
+}
+
+.inputField button:hover {
+  background-color: #3b1cff;
+}
+
+.inputField .grid {
+  gap: 10px;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.modalContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.604);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.modalContainer .modalContent {
+  height: 100%;
+  width: 100%;
+  max-width: 650px;
+  border-radius: 15px;
+  overflow: scroll;
+  display: -ms-grid;
+  display: grid;
+  place-items: center !important;
+}
+
+.modalContainer .modalContent .modal {
+  color: #dbdbdb;
+  background-color: #f5f4f7;
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.modalContainer .modalContent .modalHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #161618;
+  padding-left: 10px;
+}
+
+.modalContainer .modalContent .modalHeader .closeBtn {
+  font-size: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.listItem {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  min-height: 80px;
+  -ms-grid-columns: 1fr 80px;
+      grid-template-columns: 1fr 80px;
+  border-radius: 15px;
+  background-color: #161618;
+  color: #f5f4f7;
+  overflow: hidden;
+}
+
+.listItem .textFields {
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.listItem h2 {
+  padding: 10px;
+}
+
+.listItem h3 {
+  padding: 0 10px 10px 10px;
+  color: #f5f4f7 !important;
+}
+
+.listItem .icon {
+  padding: 10px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+@media (max-width: 800px) {
+  .grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.marginBottom {
+  margin-bottom: 30px;
+}
+
+.marginTop {
+  margin-top: 30px;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.alertBox {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  background-color: #ff6666;
+  border-radius: 15px;
+}
+
+.Dropdown-control {
+  border-radius: 15px !important;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background-color: #f5f4f7 !important;
+  font-size: 20px;
+  cursor: pointer !important;
+}
+
+.Dropdown-menu {
+  border-radius: 15px !important;
+  margin-top: 5px !important;
+  background-color: #f5f4f7 !important;
+}
+
+.ql-container {
+  border: none;
+}
+
+.ql-container p {
+  font-size: 20px;
+  color: #161618;
+}
+
+.ql-container .ql-editor {
+  border: 3px solid #161618;
+  border-radius: 15px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.ql-container .ql-editor:focus {
+  border: 3px solid #00007e;
+}
+
+.ql-container .ql-editor.ql-blank::before {
+  padding-left: 10px;
+}
+
+.ql-container.ql-snow {
+  border: none !important;
+}
+
 .homePageContainer {
   background: #8e9eab;
   background: -webkit-gradient(linear, left bottom, left top, from(#8e9eab), to(#eef2f3));
@@ -426,4 +635,103 @@ input:focus {
   .registerPageContainer {
     height: auto;
   }
+}
+
+.facultyPageContainer {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.facultyPageContainer .facultyContainer {
+  max-width: 800px;
+  width: 100%;
+}
+
+.classesPageContainer {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.classesPageContainer .classesContainer {
+  max-width: 800px;
+  width: 100%;
+}
+
+.classesPageContainer .classesContainer .grid {
+  margin-top: 15px;
+}
+
+.classesPageContainer .classListItem {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  min-height: 80px;
+  -ms-grid-columns: 1fr 60px;
+      grid-template-columns: 1fr 60px;
+  border-radius: 15px;
+  background-color: #161618;
+  color: #f5f4f7;
+}
+
+.classesPageContainer .classListItem h2 {
+  padding: 10px;
+}
+
+.classesPageContainer .classListItem .icon {
+  background-color: #3c26ca;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-radius: 0 14px 14px 0;
+  height: 100%;
+  width: 100%;
+  font-size: 22px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.classesPageContainer .classListItem .icon:hover {
+  background-color: #3b1cff;
+}
+
+.classesPageContainer .classListItem .flexBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  overflow-x: scroll;
+}
+
+.classesPageContainer .classListItem .flexBox .listItem {
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.classesPageContainer .classListItem h3,
+.classesPageContainer .classListItem h4 {
+  text-align: left;
+  color: #161618;
+}
+
+.classesPageContainer .classListItem .btnContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+
+.classesPageContainer .classListItem .btnContainer button {
+  height: 50px;
+  font-size: 20px;
+  width: 100%;
+  background-color: #161618;
+}
+
+.classesPageContainer .classListItem .classGrid {
+  display: -ms-grid;
+  display: grid;
+  gap: 15px;
 }

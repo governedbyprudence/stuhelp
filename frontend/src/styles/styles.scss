@@ -228,6 +228,192 @@ input {
   }
 }
 
+// REUSABLE COMPONENTS
+.inputField {
+  border-radius: 15px;
+  background-color: $background2;
+  color: $text_white;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  gap: 10px;
+  margin-bottom: 10px;
+
+  input {
+    margin-top: 10px;
+  }
+
+  button {
+    background-color: $accent1;
+
+    &:hover {
+      background-color: $accent1_hover;
+    }
+  }
+
+  .grid {
+    gap: 10px;
+    grid-template-columns: 1fr;
+  }
+}
+
+.modalContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.604);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  overflow: hidden;
+  z-index: 999;
+
+  .modalContent {
+    height: 100%;
+    width: 100%;
+    max-width: 650px;
+    border-radius: 15px;
+    overflow: scroll;
+    display: grid;
+    place-items: center !important;
+
+    .modal {
+      color: $background1;
+      background-color: $text_white;
+      border-radius: 15px;
+      padding: 10px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .modalHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: $text_dark;
+      padding-left: 10px;
+
+      .closeBtn {
+        font-size: 20px;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.listItem {
+  display: grid;
+  place-items: center;
+  min-height: 80px;
+  grid-template-columns: 1fr 80px;
+  border-radius: 15px;
+  background-color: $background2;
+  color: $text_white;
+  overflow: hidden;
+
+  .textFields {
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+  }
+
+  h2 {
+    padding: 10px;
+  }
+
+  h3 {
+    padding: 0 10px 10px 10px;
+    color: $text_white  !important;
+  }
+
+  .icon {
+    padding: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.marginBottom {
+  margin-bottom: 30px;
+}
+
+.marginTop {
+  margin-top: 30px;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.alertBox {
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  background-color: rgb(255, 102, 102);
+  border-radius: 15px;
+}
+
+//SNIPPETS
+.Dropdown-control {
+  border-radius: 15px !important;
+  display: grid;
+  place-items: center;
+  background-color: $text_white  !important;
+  font-size: 20px;
+  cursor: pointer !important;
+}
+
+.Dropdown-menu {
+  border-radius: 15px !important;
+  margin-top: 5px !important;
+  background-color: $text_white  !important;
+}
+
+.ql-container {
+  border: none;
+
+  p {
+    font-size: 20px;
+    color: $text_dark;
+  }
+
+  .ql-editor {
+    border: 3px solid $background2;
+    border-radius: 15px;
+    transition: 0.3s;
+
+    &:focus {
+      border: 3px solid rgb(0, 0, 126);
+    }
+  }
+
+  .ql-editor.ql-blank::before {
+    padding-left: 10px;
+  }
+}
+
+.ql-container.ql-snow {
+  border: none !important;
+}
+
 //PAGES
 .homePageContainer {
   background: #8e9eab;
@@ -388,6 +574,93 @@ input {
 @media (max-width: 500px) {
   .registerPageContainer {
     height: auto;
+  }
+}
+
+.facultyPageContainer {
+  display: grid;
+  place-items: center;
+
+  .facultyContainer {
+    max-width: $max_width2;
+    width: 100%;
+  }
+}
+
+.classesPageContainer {
+  display: grid;
+  place-items: center;
+
+  .classesContainer {
+    max-width: $max_width2;
+    width: 100%;
+
+    .grid {
+      margin-top: 15px;
+    }
+  }
+
+  .classListItem {
+    display: grid;
+    place-items: center;
+    min-height: 80px;
+    grid-template-columns: 1fr 60px;
+    border-radius: 15px;
+    background-color: $background2;
+    color: $text_white;
+
+    h2 {
+      padding: 10px;
+    }
+
+    .icon {
+      background-color: $accent1;
+      display: grid;
+      place-items: center;
+      border-radius: 0 14px 14px 0;
+      height: 100%;
+      width: 100%;
+      font-size: 22px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: $accent1_hover;
+      }
+    }
+
+    .flexBox {
+      display: flex;
+      gap: 10px;
+      overflow-x: scroll;
+
+      .listItem {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    h3,
+    h4 {
+      text-align: left;
+      color: $text_dark;
+    }
+
+    .btnContainer {
+      display: flex;
+      gap: 15px;
+
+      button {
+        height: 50px;
+        font-size: 20px;
+        width: 100%;
+        background-color: $background2;
+      }
+    }
+
+    .classGrid {
+      display: grid;
+      gap: 15px;
+    }
   }
 }
 
