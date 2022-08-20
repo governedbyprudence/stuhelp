@@ -1,7 +1,11 @@
+import { useContext } from "react";
+
+import { useNavigate } from "react-router";
+
 import Navbar from "../resuableComponents/navbar";
+
 import { AuthContext } from "../../context/AuthContext";
-import { useContext, useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { logoutAdmin } from "../../apiCalls";
 
 const Settings = () => {
   const { user, dispatch } = useContext(AuthContext);

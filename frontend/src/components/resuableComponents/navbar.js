@@ -1,3 +1,7 @@
+import { useContext } from "react";
+
+import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
@@ -6,11 +10,11 @@ import {
   faCog,
   faSignOutAlt,
 } from "@fortawesome/free-solid-svg-icons";
-import { Link, useNavigate } from "react-router-dom";
+
 import { AuthContext } from "../../context/AuthContext";
-import { useContext } from "react";
-import Icon from "../../assets/icon.png";
 import { logoutStudent } from "../../apiCalls";
+
+import Icon from "../../assets/icon.png";
 
 const Navbar = ({ type, btn }) => {
   const { user, dispatch } = useContext(AuthContext);

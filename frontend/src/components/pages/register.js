@@ -1,6 +1,9 @@
-import { useNavigate } from "react-router";
 import { useContext, useEffect, useRef, useState } from "react";
+
+import { useNavigate } from "react-router";
+
 import { AuthContext } from "../../context/AuthContext";
+import { registerAdmin } from "../../apiCalls";
 
 const Register = () => {
   const { dispatch } = useContext(AuthContext);
