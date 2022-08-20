@@ -735,3 +735,79 @@ input:focus {
   display: grid;
   gap: 15px;
 }
+
+.studentPageContainer {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.studentPageContainer .headerSection {
+  max-width: 800px;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.studentPageContainer .headerSection h1 {
+  place-self: start;
+}
+
+.studentPageContainer .feedBackButtonsContainer {
+  max-width: 800px;
+  width: 100%;
+}
+
+.studentPageContainer .feedBackButtonsContainer .feedbackButton {
+  min-height: 100px;
+  width: 100%;
+  border-radius: 15px;
+  background-color: #161618;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 80px;
+      grid-template-columns: 1fr 80px;
+  place-items: center;
+  color: #f5f4f7;
+  text-align: center;
+  overflow: hidden;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.studentPageContainer .feedBackButtonsContainer .feedbackButton .icon {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 100%;
+  width: 100%;
+  font-size: 45px;
+  padding: 10px;
+}
+
+.studentPageContainer .feedBackButtonsContainer .feedbackButton .done {
+  background-color: green;
+}
+
+.studentPageContainer .feedBackButtonsContainer .institute {
+  margin-bottom: 10px;
+}
+
+.studentPageContainer .feedBackButtonsContainer .modal h3 {
+  text-align: left;
+  padding: 0 10px;
+  color: #161618;
+}
+
+.studentPageContainer .feedBackButtonsContainer .modal h4 {
+  color: #3c3c3c;
+}
+
+.studentPageContainer .feedBackButtonsContainer .modal button {
+  background-color: #3c26ca;
+  font-size: 20px;
+  padding: 10px 30px;
+}
+
+.studentPageContainer .feedBackButtonsContainer .modal button:hover {
+  background-color: #3b1cff;
+}

@@ -664,3 +664,77 @@ input {
   }
 }
 
+.studentPageContainer {
+  display: grid;
+  place-items: center;
+
+  .headerSection {
+    max-width: 800px;
+    width: 100%;
+    padding-bottom: 10px;
+
+    h1 {
+      place-self: start;
+    }
+  }
+
+  .feedBackButtonsContainer {
+    max-width: $max_width2;
+    width: 100%;
+
+    .feedbackButton {
+      min-height: 100px;
+      width: 100%;
+      border-radius: 15px;
+      background-color: $background2;
+      display: grid;
+      grid-template-columns: 1fr 80px;
+      place-items: center;
+      color: $text_white;
+      text-align: center;
+      overflow: hidden;
+      padding: 10px;
+      cursor: pointer;
+
+      .icon {
+        display: grid;
+        place-items: center;
+        height: 100%;
+        width: 100%;
+        font-size: 45px;
+        padding: 10px;
+      }
+
+      .done {
+        background-color: green;
+      }
+    }
+
+    .institute {
+      margin-bottom: 10px;
+    }
+
+    .modal {
+      h3 {
+        text-align: left;
+        padding: 0 10px;
+        color: $text_dark;
+      }
+
+      h4 {
+        color: rgb(60, 60, 60);
+      }
+
+      button {
+        background-color: $accent1;
+        font-size: 20px;
+        padding: 10px 30px;
+
+        &:hover {
+          background-color: $accent1_hover;
+        }
+      }
+    }
+  }
+}
+
