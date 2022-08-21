@@ -29,8 +29,9 @@ Admins add classes of the institutes, faculty and students.
 Students recieve their credentials via mail provided by their admins. They log in an provide feedback for their institute, teachers and subjects.
 
 ## Tech used
-React
-Python
+React <br>
+Python <br> 
+Django <a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/django.svg" alt="django" width="40" height="40"/> </a> <br>
 NLP libraries 
 
 #### Assumptions
