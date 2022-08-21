@@ -1,6 +1,7 @@
 # GREETINGS !
 
 ## PROBLEM
+![](https://assets.change.org/photos/5/ft/ee/UnFTeEJuRTCfkcN-800x450-noPad.jpg?1519072940)
 #### As per the results of a survey across India on higher education, there were 42,343 colleges and 10,30,996 schools across India.
 
 > For reasons that are as nuanced and diverse as the country itself, India has failed to retain its students in a quality educative environment. - TOI
