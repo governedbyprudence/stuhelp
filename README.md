@@ -11,7 +11,7 @@
 ## How do we do it ?
 
 We take ****feedback**** for various aspects of the institute from registered students of that particular institute and run it through our machine learning program for sentiment analysis. 
-That data is stored in our server for any type of data analysis to determine the problems faced by students accross any/all institutes.
+That data is stored in our server for any type of data analysis to determine the problems faced by students across any/all institutes.
 
 ## Track
 #### Education
